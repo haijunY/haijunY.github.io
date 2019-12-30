@@ -1,0 +1,111 @@
+---
+title: generator
+categories: summer
+---
+在日常项目中，常常需要把表转换成java实体类以及mapper.xml文件，这个在mybatis的开发中我们会用官方提供的插件mybatis-generator去实现，但本文介绍一种手写代码的形式去生成代码，代码生成好后以zip文件下载到本地
+
+## 代码地址
+
+[git地址](https://github.com/haijunY/summer/tree/master/summer-generator)
+
+## 如何使用
+
+第一步，修改数据库链接地址，打开application.yml文件
+
+```yml
+#mysql
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/summer?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password:
+```
+
+第二步，修改包名、作者名、邮箱，用于生成类的信息，表头的不需要生成到代码里的字符串，如t_user的t_
+
+```properties
+#包名
+package=com.haijuny.summer.genertor
+#作者
+author=haijuny
+#Email
+email=250556881@qq.com
+
+#表前错误的Unicode字符串，如：表t_user，类名为User，tablePrefix=t
+tablePrefix=
+```
+
+第三步，个性化修改模板，在resources/template下有各种vm模板，这些就是生成具体文件的模板，我们可以自己去修改它做一些定制，比如Mapper.java类需要继承的公共类，导入的包，需要的变量可以在GeneratorService.generatorCode()方法的“封装模板数据”中找到
+
+```vm
+@Service
+public class ${className}Biz<${className}Mapper, ${className}> {
+
+}
+```
+
+可以改成
+
+```vm
+import ${package}.common.CommonBiz;
+
+@Service
+public class ${className}Biz extends CommonBiz<${className}Mapper, ${className}> {
+
+}
+```
+
+第四步，启动SummerGeneratorApplication.class，浏览器输入localhost:7777/code?tables=table_name1,table_name2多个表用逗号隔开即可，即可得到一个zip包，解压可得相关代码
+
+## 原理
+
+基本原理是通过mysql的表information_schema.tables、information_schema.columns可以拿到表信息和字段信息，读取出来以后通过vm模板进行渲染，最后生成对应文件并转换成zip流输出
+
+## 实现过程
+
+第一步，读取数据库信息的GeneratorMapper.java
+
+```java
+@Mapper
+public interface GeneratorMapper {
+
+    Map<String, String> queryTable(String tableName);
+
+    List<Map<String, String>> queryColumns(String tableName);
+
+}
+```
+
+读取表信息和字段信息的sql
+
+```sql
+select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables
+            where table_schema = (select database()) and table_name = #{tableName}
+            
+select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns
+            where table_schema = (select database()) and table_name = #{tableName} order by ordinal_position
+```
+
+第二步，渲染模板
+
+```java
+StringWriter sw = new StringWriter();
+Template tpl = Velocity.getTemplate(template, "UTF-8");
+tpl.merge(context, sw);
+```
+
+第三步，输出流
+
+```java
+ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+ZipOutputStream zip = new ZipOutputStream(outputStream);     
+zip.putNextEntry(new ZipEntry(getFileName(template, tableEntity.getClassName(), config.getString("package"), config.getString("mainModule"))));
+org.apache.commons.io.IOUtils.write(sw.toString(), zip, "UTF-8");
+org.apache.commons.io.IOUtils.closeQuietly(sw);
+zip.closeEntry();
+```
+
+详细实现请下载代码
+
