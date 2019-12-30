@@ -1,6 +1,8 @@
 ---
 title: Linux常用命令
+date: 2018-09-18 15:07:00
 categories: 其它
+tags: [日志]
 ---
 ##查看日志
 ```

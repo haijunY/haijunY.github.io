@@ -114,5 +114,5 @@ public class Test {
 
 ```
 ## 运行结果
-![image.png](http://118.25.96.88/images/Framework-DemoMybatis-2.png)
+<img src="../images/Framework-DemoMybatis-2.png">
 

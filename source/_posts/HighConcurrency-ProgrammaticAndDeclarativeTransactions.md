@@ -1,6 +1,8 @@
 ---
 title: 编程式事务和声明式事务
+date: 2018-07-28 15:07:00
 categories: 高并发
+tags: [事务]
 ---
 本篇文章承接[《springboot的mybatis示例》](https://www.haijunyin.com/Framework-DemoSpringbootMybatis.html)
 ## 编程式事务

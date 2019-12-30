@@ -1,6 +1,8 @@
 ---
 title: git使用
+date: 2018-06-12 15:07:00
 categories: 软件工具
+tags: [git]
 ---
 [中文官网](https://git-scm.com/)
 [安装教程](https://jingyan.baidu.com/article/9f7e7ec0b17cac6f2815548d.html)

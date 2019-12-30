@@ -1,11 +1,13 @@
 ---
 title: 腾讯服务云部署
+date: 2018-09-20 15:07:00
 categories: 其它
+tags: [云服务]
 ---
 ## 准备工作
 1.申请腾讯云服务器
 可以用QQ、微信申请一个试用15天的，登陆进入如图
-![image.png](http://118.25.96.88/images/Other-tengxunyun-1.png)
+<img src="../images/Other-tengxunyun-1.png">
 2.重置密码
 点击重置密码进行重置密码操作，然后重启服务器
 

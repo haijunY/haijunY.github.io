@@ -1,6 +1,8 @@
 ---
 title: generator
+date: 2018-08-23 15:07:00
 categories: summer
+tags: [Mybatis]
 ---
 在日常项目中，常常需要把表转换成java实体类以及mapper.xml文件，这个在mybatis的开发中我们会用官方提供的插件mybatis-generator去实现，但本文介绍一种手写代码的形式去生成代码，代码生成好后以zip文件下载到本地
 

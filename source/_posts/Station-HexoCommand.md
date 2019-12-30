@@ -1,6 +1,8 @@
 ---
 title: hexo常用命令
+date: 2018-11-12 15:07:00
 categories: 建站总结
+tags: 
 ---
 
 ```

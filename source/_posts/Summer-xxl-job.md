@@ -1,7 +1,8 @@
 ---
 title: xxl-job
+date: 2018-08-23 15:07:00
 categories: summer
-
+tags: [定时任务]
 
 ---
 
@@ -56,4 +57,5 @@ public class DemoJobHandler extends IJobHandler {
 
 ### 后台配置
 
-在“任务管理”一栏“新增任务”，添加对应是corn表达式，确定后，点击启动即可启动当前定时任务![img](http://118.25.96.88/images/XXL新增任务.png)
+在“任务管理”一栏“新增任务”，添加对应是corn表达式，确定后，点击启动即可启动当前定时任务
+<img src="../images/XXL新增任务.png">

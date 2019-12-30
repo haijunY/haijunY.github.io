@@ -1,24 +1,26 @@
 ---
 title: Hexo博客的阅读统计和评论功能
+date: 2018-11-12 15:07:00
 categories: 建站总结
+tags: 
 ---
 
 hexo的nexT框架支持阅读统计和评论的功能，我们需要用到leancloud账号，将统计数据和评论内容存储到leancloud上，具体步骤如下
 ### leancloud
 送上传送门[leancloud](https://leancloud.cn/)
 1.首先需要创建一个应用，我们可以命名为mblog，选择开发版
-![image.png](http://118.25.96.88/images/Station-HexoReadingCountAndComment-1.png)
+<img src="../images/Station-HexoReadingCountAndComment-1.png">
 2.然后创建class实例
 创建Counter，设置数据条目的默认为无限制
 
-![image.png](http://118.25.96.88/images/Station-HexoReadingCountAndComment-2.png)
+<img src="../images/Station-HexoReadingCountAndComment-2.png">
 
 Counter实例存储阅读统计信息，Comment实例存储评论功能，Comment实例在配置好nexT后会自动生成
 3.在安全中心添加你的博客域名
-![image.png](http://118.25.96.88/images/Station-HexoReadingCountAndComment-3.png)
+<img src="../images/Station-HexoReadingCountAndComment-3.png">
 
 4.记住AppId和AppKey
-![image.png](http://118.25.96.88/images/Station-HexoReadingCountAndComment-4.png)
+<img src="../images/Station-HexoReadingCountAndComment-4.png">
 
 ### 配置next的_config.yml
 ```
@@ -49,6 +51,6 @@ leancloud_visitors:
 ### 重新发布博客
 效果如下
 阅读统计
-![image.png](http://118.25.96.88/images/Station-HexoReadingCountAndComment-5.png)
+<img src="../images/Station-HexoReadingCountAndComment-5.png">
 评论功能
-![image.png](http://118.25.96.88/images/Station-HexoReadingCountAndComment-6.png)
+<img src="../images/Station-HexoReadingCountAndComment-6.png">

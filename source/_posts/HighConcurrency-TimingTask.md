@@ -1,6 +1,8 @@
 ---
 title: 定时任务
+date: 2018-07-28 15:07:00
 categories: 高并发
+tags: [定时任务]
 ---
 ## springboot中的定时任务
 1.在启动类上加入@EnableScheduling开启定时任务

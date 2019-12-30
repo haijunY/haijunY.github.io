@@ -1,6 +1,8 @@
 ---
 title: ubuntu安装tomcat
+date: 2018-09-20 15:07:00
 categories: 其它
+tags: 
 ---
 ubuntu是一个开源的Linux操作系统，apt插件用于安装各种应用，它把应用都分好了目录的，我们只需要用命令就可以一键安装各种应用,很多常用的Linux命令之前需要加上sudo以获得权限，比如需要编辑文件应这样写,编辑sudo vi xxx.txt，上传文件sudo rz
 

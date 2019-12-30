@@ -1,6 +1,8 @@
 ---
 title: 多线程
+date: 2018-07-28 15:07:00
 categories: 高并发
+tags: [线程]
 ---
 ## 线程基本介绍和创建方式
 参考[Java 多线程编程](http://www.runoob.com/java/java-multithreading.html)

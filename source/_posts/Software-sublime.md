@@ -1,6 +1,8 @@
 ---
 title: sublime使用
+date: 2018-10-12 15:07:00
 categories: 软件工具
+tags: 
 ---
 sublime是一个强大的代码编辑器，[官方地址](http://www.sublimetext.com)
 ## 使用技巧

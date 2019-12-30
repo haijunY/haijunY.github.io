@@ -1,10 +1,12 @@
 ---
 title: springmvc的注解配置
+date: 2018-07-24 15:07:00
 categories: 技术框架
+tags: [Springmvc]
 ---
 ## 构建过程
 项目结构如图
-![image.png](http://118.25.96.88/images/Framework-SpringmvcAnnotationConfig-1.png)
+<img src="../images/Framework-SpringmvcAnnotationConfig-1.png">
 
 pom.xml，添加springmvc相关依赖
 ```xml
@@ -177,4 +179,4 @@ public class SpringmvcServletConfig extends WebMvcConfigurerAdapter {
 ## 运行结果
 项目构建完成后启动tomcat
 
-![images.gif](http://118.25.96.88/images/Framework-SpringmvcAnnotationConfig-2.gif)
+<img src="../images/Framework-SpringmvcAnnotationConfig-2.gif">
