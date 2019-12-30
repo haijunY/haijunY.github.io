@@ -1,10 +1,13 @@
 ---
 title: springboot的thymeleaf示例
+date: 2018-08-23 15:07:00
 categories: 技术框架
+tags: [Springboot,Thymeleaf]
 ---
 ## 构建过程
 用springboot构建显然比用springmvc构建方式简洁多了，项目结构如图
-![image.png](http://118.25.96.88/images/Framework-DemoSpringbootThymeleaf-1.png)
+<img src="../images/Framework-DemoSpringbootThymeleaf-1.png">
+
 pom.xml
 
 ```xml
@@ -305,7 +308,7 @@ show.html
 ```
 ## 运行结果
 
-![image.gif](http://118.25.96.88/images/Framework-DemoSpringbootThymeleaf-2.gif)
+<img src="../images/Framework-DemoSpringbootThymeleaf-2.gif">
 
 ## 总结
 在用springmvc+thymeleaf组合时候，由于配置比较多，而且资料杂，差不多一天才写成demo，然而用springboot+thymeleaf组合，仅仅不到半小时，就把demo调试通了，这得益于springboot的易用，从demo中可以看到，所有的配置项都在application.properties文件里，仅仅从搭建项目来看，不需要了解MVC模式和原理，而使用springmvc则不行，必须知道哪个类是视图解析器，以及哪个类是模板引擎，并给相应参数赋值

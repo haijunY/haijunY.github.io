@@ -1,10 +1,12 @@
 ---
 title: servlet的xml配置
+date: 2018-08-23 15:07:00
 categories: 技术框架
+tags: [Servlet,Config]
 ---
 ## 构建过程
 项目结构如图
-![image.png](http://118.25.96.88/images/Framework-DemoServletXmlConfig-1.png)
+<img src="../images/Framework-DemoServletXmlConfig-1.png">
 pom.xml依赖，导入servlet包
 
 ```xml
@@ -92,7 +94,7 @@ index.jsp请求页
 ```
 ## 运行结果
 把应用加入tomcat启动
-![image.png](http://118.25.96.88/images/Framework-DemoServletXmlConfig-2.png)
+<img src="../images/Framework-DemoServletXmlConfig-2.png">
 
 
 

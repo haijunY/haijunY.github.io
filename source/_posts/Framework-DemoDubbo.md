@@ -1,14 +1,16 @@
 ---
 title: dubbo的简单示例
+date: 2018-08-23 15:07:00
 categories: 技术框架
+tags: [Dubbo]
 ---
 
 ## 构建过程
 dubbo服务有服务方provider和消费方consumer，整个项目用tomcat做容器，在创建demo之前请先安装zookeeper
 项目结构如图
-![image.png](http://118.25.96.88/images/Framework-DemoDubbo-1.png)
-![image.png](http://118.25.96.88/images/Framework-DemoDubbo-2.png)
-![image.png](http://118.25.96.88/images/Framework-DemoDubbo-3.png)
+<img src="../images/Framework-DemoDubbo-1.png">
+<img src="../images/Framework-DemoDubbo-2.png">
+<img src="../images/Framework-DemoDubbo-3.png">
 
 主pom.xml
 ```xml

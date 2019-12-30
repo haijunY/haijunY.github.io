@@ -1,12 +1,14 @@
 ---
 title: layui的一个登录和权限示例
+date: 2018-08-23 15:07:00
 categories: 技术框架
+tags: [Layui]
 ---
 layui是一个专门为后台而设计的一个前端框架，功能强大，特别适合后端开发人员，本文以一个demo把登录模块和权限模块基本原理说明，详细的内容可以参考[layui的官方文档](https://www.layui.com/doc/)
 ## 搭建项目
 项目架构是springboot+thymeleaf+layui，结构如下图，文件有点多，分成两张图
-![image.png](http://118.25.96.88/images/Framework-DemoLayuiLoginAndPermission-1.png)
-![image.png](http://118.25.96.88/images/Framework-DemoLayuiLoginAndPermission-2.png)
+<img src="../images/Framework-DemoLayuiLoginAndPermission-1.png">
+<img src="../images/Framework-DemoLayuiLoginAndPermission-2.png">
 
 其中resources资源文件里的layui文件夹下就是layui的所有文件，内容需要到官网下载，解压后全部复制即可
 
@@ -906,12 +908,13 @@ public class AdminUserServiceImpl implements AdminUserService {
 http://localhost:8020/
 ```
 弹出登陆页面
-![image.png](http://118.25.96.88/images/Framework-DemoLayuiLoginAndPermission-3.png)
+<img src="../images/Framework-DemoLayuiLoginAndPermission-3.png">
+
 输入用户名，密码(123456)，出现首页
-![,](http://118.25.96.88/images/Framework-DemoLayuiLoginAndPermission-4.png)
+<img src="../images/Framework-DemoLayuiLoginAndPermission-4.png">
 
 点击权限管理或订单管理，出现子窗口信息
-![image.png](http://118.25.96.88/images/Framework-DemoLayuiLoginAndPermission-5.png)
+<img src="../images/Framework-DemoLayuiLoginAndPermission-5.png">
 
 ## 总结
 到此，Demo结束，可以看出一个完整的登陆和权限也是不简单的，本文只是把主干完成了，细节的东西没用去设计，比如登陆页的校验、验证码，还有权限的表设计，等等，不过这些都不是问题了，后续只需要慢慢完善即可，我们通过这个Demo，已经成功地开启了layui的大门

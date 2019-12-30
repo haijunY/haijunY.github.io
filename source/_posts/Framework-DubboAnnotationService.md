@@ -1,6 +1,8 @@
 ---
 title: dubbo的注解方式服务
+date: 2018-08-23 15:07:00
 categories: 技术框架
+tags: [Dubbo]
 ---
 在dubbo.xml中添加配置，指向需要扫描的包
 ```xml

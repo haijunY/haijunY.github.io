@@ -1,6 +1,8 @@
 ---
 title: springboot的mybatis示例
+date: 2018-08-23 15:07:00
 categories: 技术框架
+tags: [Springboot,Mybatis]
 ---
 
 本篇文章用一个简单的demo介绍了mybatis在springboot中如何配置使用，包括自动生成实体类和mapper文件，还有枚举类的处理，在创建demo之前需要在mysql中创建一个user表做演示用
@@ -19,7 +21,7 @@ CREATE TABLE `user` (
 ```
 ## 构建过程
 项目结构如图
-![image.png](http://118.25.96.88/images/Framework-DemoSpringbootMybatis-1.png)
+<img src="../images/Framework-DemoSpringbootMybatis-1.png">
 
 pom.xml引入相关包
 ```xml
@@ -539,7 +541,7 @@ public class UserLevelEnumHandler extends BaseTypeHandler<UserLevelEnum> {
 }
 ```
 接下来还有User.java、UserMapper.java、UserMapper.xml，这些是由插件生成的，我们需要在idea中配置generatorConfig，如图
-![image.png](http://118.25.96.88/images/Framework-DemoSpringbootMybatis-2.png)
+<img src="../images/Framework-DemoSpringbootMybatis-2.png">
 
 配置完成后，运行插件，生成代码
 User.java

@@ -1,6 +1,8 @@
 ---
 title: springboot的原理
+date: 2018-08-23 15:07:00
 categories: 技术框架
+tags: [Spring,Springboot]
 ---
 承接springmvc的工作原理，这里探讨springboot是如何工作的，由springboot的启动类SpringbootdemoSimpleApplication.java开始，我们知道，如果想把springboot的项目打包放到tomcat里运行，需要将启动类继承SpringBootServletInitializer
 ```java
@@ -32,7 +34,7 @@ public abstract class SpringBootServletInitializer implements WebApplicationInit
 		</dependency>
 ```
 注解@SpringBootApplication是springboot启动的关键注解，该注解下有@EnableAutoConfiguration注解，开启自动配置，会把相关的配置类加载到spring容器中，而这些配置类的全类名，就在文件spring.factories下
-![image.png](http://118.25.96.88/images/Framework-SpringbootPrinciple-1.png)
+<img src="../images/Framework-SpringbootPrinciple-1.png">
 比如WebMvcAutoConfiguration就是springmvc的配置类，加载此配置类，就相当于普通的springmvc项目的springmvc-servlet.xml配置。
 
 ## 总结

@@ -1,10 +1,13 @@
 ---
 title: springmvc的thymeleaf示例
+date: 2018-08-23 15:07:00
 categories: 技术框架
+tags: [Springmvc,Thymeleaf]
 ---
 ## 构建过程
 项目结构如图
-![image.png](http://118.25.96.88/images/Framework-DemoSpringmvcThymeleaf-1.png)
+<img src="../images/Framework-DemoSpringmvcThymeleaf-1.png">
+
 pom.xml引入相关jar包
 
 ```xml
@@ -333,7 +336,7 @@ public class User {
 ```
 ## 运行结果
 启动tomcat运行
-![image.gif](http://118.25.96.88/images/Framework-DemoSpringmvcThymeleaf-2.gif)
+<img src="../images/Framework-DemoSpringmvcThymeleaf-2.gif">
 
 ## 总结
 在sprigmvc模式中，控制层controller用于处理业务逻辑并返回结果集，controller不会做视图渲染，而是将视图渲染交给视图解析器处理，springmvc有许多视图解析器，如InternalResourceViewResolver、GroovyMarkupViewResolver、FreeMarkerViewResolver、ThymeleafViewResolver，它们是接口ViewResolver的子类，视图解析器用于渲染对应的模板，比如ThymeleafViewResolver渲染thymeleaf模板，本文是thymeleaf的一个demo

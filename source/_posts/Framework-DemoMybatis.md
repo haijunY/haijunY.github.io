@@ -2,13 +2,15 @@
 title: mybatis入门
 date: 2018-08-23 15:07:00
 categories: 技术框架
+tags: [Mybatis]
 ---
 MyBatis 是一款优秀的持久层框架，它支持定制化 SQL、存储过程以及高级映射，本文通过一个demo把MyBatis进行简单构建
 [参考文档](http://www.mybatis.org/mybatis-3/)
 [demo地址](https://github.com/haijunY/framedemo_mybatis)
 ## 构建过程
 项目结构如图所示，仅有简单的几个文件
-![image.png](http://118.25.96.88/images/Framework-DemoMybatis-1.png)
+
+<img src="../images/Framework-DemoMybatis-1.png">
 pom.xml，依赖mybatis的包和mysql驱动
 
 ```xml

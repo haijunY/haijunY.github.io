@@ -1,10 +1,12 @@
 ---
 title: springboot的简单web示例
+date: 2018-08-23 15:07:00
 categories: 技术框架
+tags: [Springboot,Web]
 ---
 ## 构建过程
 项目结构如图
-![image.png](http://118.25.96.88/images/Framework-DemoSpringbootSimpleWeb-1.png)
+<img src="../images/Framework-DemoSpringbootSimpleWeb-1.png">
 
 pom.xml导入相关依赖包
 ```xml
@@ -158,5 +160,5 @@ hello.html
 application.properties无内容
 ## 运行结果
 启动tomcat
-![image.gif](http://118.25.96.88/images/Framework-DemoSpringbootSimpleWeb-2.gif)
+<img src="../images/Framework-DemoSpringbootSimpleWeb-2.gif">
 

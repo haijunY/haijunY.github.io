@@ -1,10 +1,12 @@
 ---
 title: springmvc的xml配置
+date: 2018-08-23 15:07:00
 categories: 技术框架
+tags: [Springmvc,Config]
 ---
 ## 构建过程
 项目结构如图
-![image.png](http://118.25.96.88/images/Framework-DemoSpringmvcXmlConfig-1.png)
+<img src="../images/Framework-DemoSpringmvcXmlConfig-1.png">
 
 pom.xml，添加springmvc相关依赖
 ```xml
@@ -164,9 +166,7 @@ springmvc-servlet.xml,这里的命名与web.xml中spring配置的servletName相�
 ```
 ## 运行结果
 项目构建完成后启动tomcat
-![image.png](http://118.25.96.88/images/Framework-DemoSpringmvcXmlConfig-2.png)
-
-![image.png](http://118.25.96.88/images/Framework-DemoSpringmvcXmlConfig-3.png)
-
-![image.png](http://118.25.96.88/images/Framework-DemoSpringmvcXmlConfig-4.png)
+<img src="../images/Framework-DemoSpringmvcXmlConfig-2.png">
+<img src="../images/Framework-DemoSpringmvcXmlConfig-3.png">
+<img src="../images/Framework-DemoSpringmvcXmlConfig-4.png">
 

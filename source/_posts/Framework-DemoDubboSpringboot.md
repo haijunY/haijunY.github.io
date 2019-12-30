@@ -1,13 +1,15 @@
 ---
 title: dubbo的springboot示例
+date: 2018-08-23 15:07:00
 categories: 技术框架
+tags: [Dubbo,Springboot]
 ---
 使用springboot整合dubbo，不需要任何xml文件配置，请先安装zookeeper
 ## 构建过程
 项目结构如图
-![image.png](http://118.25.96.88/images/Framework-DemoDubboSpringboot-1.png)
-![image.png](http://118.25.96.88/images/Framework-DemoDubboSpringboot-2.png)
-![image.png](http://118.25.96.88/images/Framework-DemoDubboSpringboot-3.png)
+<img src="../images/Framework-DemoDubboSpringboot-1.png">
+<img src="../images/Framework-DemoDubboSpringboot-2.png">
+<img src="../images/Framework-DemoDubboSpringboot-3.png">
 
 主pom.xml
 ```xml
