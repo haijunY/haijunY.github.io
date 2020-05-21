@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>悲观锁和乐观锁 | 精于心 简于形</title>
-  <meta name="keywords" content=" 锁 ">
-  <meta name="description" content="悲观锁和乐观锁 | 精于心 简于形">
+  <title>单例 | 精于心 简于形</title>
+  <meta name="keywords" content=" 设计模式 ">
+  <meta name="description" content="单例 | 精于心 简于形">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="本站是由github+hexo+nexT搭建的，至于搭建过程，参考博客,建立博客的目的主要是为了总结自己平时所遇到的技术问题，点点滴滴，这样遇到问题就不用到处去百度了">
 <meta property="og:type" content="website">
@@ -642,9 +642,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-HighConcurrency-PessimisticLockAndOptimisticLock" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-1、架构师内功心法/设计模式-单例" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">悲观锁和乐观锁</h1>
+        <h1 class="article-title">单例</h1>
     
     <div class="article-meta">
         
@@ -652,21 +652,21 @@
         
         <span class="book">
             
-                <a  data-rel="高并发">高并发</a>
+                <a  data-rel="1、架构师内功心法">1、架构师内功心法</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a class="color2">锁</a>
+            <a class="color5">设计模式</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-12-30 20:28:37'>2018-07-28 15:07</time>
+        创建时间:<time class="date" title='更新时间: 2020-05-21 15:09:23'>2020-05-21 14:33</time>
         
     </div>
     <div class="article-meta">
@@ -688,7 +688,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#悲观锁"><span class="toc-text">悲观锁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#乐观锁"><span class="toc-text">乐观锁</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#饿汉式"><span class="toc-text">饿汉式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#懒汉式"><span class="toc-text">懒汉式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#破坏单例模式的方法"><span class="toc-text">破坏单例模式的方法</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -704,8 +704,100 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="悲观锁"><a href="#悲观锁" class="headerlink" title="悲观锁"></a>悲观锁</h2><p>总是假设最坏的情况，每次拿数据的时候都认为别人会修改，所以在拿数据的时候都会先上锁<br>Java同步关键字synchronized<br>mysql的select … for update<br>oracle支持select … for update no wait</p>
-<h2 id="乐观锁"><a href="#乐观锁" class="headerlink" title="乐观锁"></a>乐观锁</h2><p>乐观锁认为，在一般的情况下数据不会发生冲突，仅在数据提交更新时，才会做一次校验<br>通常在表中加一个version版本字段，每次更新数据的时候+1，这样更新的时候会校验，当前版本号是否正确，如果不正确，则报错进行异常处理</p>
+        <p>保证一个类仅有一个实例，并提供一个访问它的全局访问点</p>
+<h3 id="饿汉式"><a href="#饿汉式" class="headerlink" title="饿汉式"></a>饿汉式</h3><p>类加载时就初始化，好像很饿的样子，优点是没有加锁执行效率很高，缺点是浪费内存</p>
+<p>实现方式一</p>
+<pre><code class="java">    private static final HungrySingleton hungrySingleton = new HungrySingleton();
+
+    private HungrySingleton(){
+
+    }
+
+    public static HungrySingleton getInstance(){
+        return hungrySingleton;
+    }</code></pre>
+<p>实现方式二</p>
+<pre><code class="java">    private static final HungryStaticSingleton hungryStaticSingleton;
+
+    static {
+        hungryStaticSingleton = new HungryStaticSingleton();
+    }
+
+    private HungryStaticSingleton(){
+
+    }
+
+    public static HungryStaticSingleton getInstance(){
+        return hungryStaticSingleton;
+    }
+</code></pre>
+<h3 id="懒汉式"><a href="#懒汉式" class="headerlink" title="懒汉式"></a>懒汉式</h3><p>第一次使用时才初始化，比较懒，优点是节省内存，缺点是需要加synchronized</p>
+<p>传统懒汉式(不建议使用)</p>
+<pre><code class="java">public class Singleton {  
+    private static Singleton instance;  
+    private Singleton (){}  
+    public static synchronized Singleton getInstance() {  
+    if (instance == null) {  
+        instance = new Singleton();  
+    }  
+    return instance;  
+    }  
+}</code></pre>
+<p>双重检查锁懒汉式</p>
+<p>在多线程情况下能保持高性能</p>
+<pre><code class="java">private volatile static LazyDoubleCheckSingleton lazy = null;
+
+    private LazyDoubleCheckSingleton(){
+
+    }
+    //双重检查锁
+    public static LazyDoubleCheckSingleton getInstance(){
+        if(lazy == null){
+            synchronized (LazyDoubleCheckSingleton.class){
+                if(lazy == null){
+                    lazy = new LazyDoubleCheckSingleton();
+                    //CPU执行时候会转换成JVM指令执行
+
+                    //指令重排序问题，volatile关键字（解决通常CPU在执行第2和第3的时候没有顺序的问题）
+                    //1、分配内存给这个对象
+                    //2、初始化对象
+                    //3、将初始化好的对象和内存地址建立关联，赋值
+                    //4、用户初次访问
+
+                }
+            }
+        }
+        return lazy;
+    }</code></pre>
+<p>静态内部类懒汉式</p>
+<p>全程没有用synchronized，性能高</p>
+<pre><code class="java">    //虽然构造方法私有了，但是逃不过反射的法眼
+    private LazyInnerClassSingleton (){
+        if(LazyHolder.LAZY != null){
+            throw new RuntimeException(&quot;不允许构建多个实例&quot;);
+        }
+    }
+
+    //懒汉式单例
+    //LazyHolder 里面的逻辑需要等到外部调用时才执行
+    //巧妙地运用了内部类的特性
+    //JVM底层执行逻辑，完美地避免了线程安全问题
+    public static  final LazyInnerClassSingleton getInstance(){
+        return LazyHolder.LAZY;
+    }
+
+    private static class LazyHolder{
+        private static final LazyInnerClassSingleton LAZY = new LazyInnerClassSingleton();
+    }</code></pre>
+<p>枚举式</p>
+<pre><code class="java">public enum Singleton {  
+    INSTANCE;  
+    public void whateverMethod() {  
+    }  
+}</code></pre>
+<h3 id="破坏单例模式的方法"><a href="#破坏单例模式的方法" class="headerlink" title="破坏单例模式的方法"></a>破坏单例模式的方法</h3><p>1、多线程，如果懒汉式单例是线程不安全的可以通过此方式破坏</p>
+<p>2、反射，通过反射调用实例化方法</p>
+<p>3、序列化，序列化之后再通过反射调用构造器进行创建实例</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 250556881@qq.com </span>
@@ -719,12 +811,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>悲观锁和乐观锁</p>
+    <p><span class="copy-title">文章标题:</span>单例</p>
     
     <p><span class="copy-title">本文作者:</span><a  title="殷海军">殷海军</a></p>
-    <p><span class="copy-title">发布时间:</span>2018-07-28, 15:07:00</p>
-    <p><span class="copy-title">最后更新:</span>2019-12-30, 20:28:37</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/HighConcurrency-PessimisticLockAndOptimisticLock/" title="悲观锁和乐观锁">http://yoursite.com/HighConcurrency-PessimisticLockAndOptimisticLock/</a>
+    <p><span class="copy-title">发布时间:</span>2020-05-21, 14:33:00</p>
+    <p><span class="copy-title">最后更新:</span>2020-05-21, 15:09:23</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/1%E3%80%81%E6%9E%B6%E6%9E%84%E5%B8%88%E5%86%85%E5%8A%9F%E5%BF%83%E6%B3%95/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8D%95%E4%BE%8B/" title="单例">http://yoursite.com/1%E3%80%81%E6%9E%B6%E6%9E%84%E5%B8%88%E5%86%85%E5%8A%9F%E5%BF%83%E6%B3%95/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8D%95%E4%BE%8B/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
