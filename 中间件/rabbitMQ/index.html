@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>rabbitMQ | 精于心 简于形</title>
+  <meta name="keywords" content=" rabbitMQ ">
+  <meta name="description" content="rabbitMQ | 精于心 简于形">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="殷海军的博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="文章分类">
+<meta property="og:url" content="http://yoursite.com/categories/index.html">
+<meta property="og:site_name" content="精于心 简于形">
+<meta property="og:description" content="殷海军的博客">
+<meta property="article:published_time" content="2018-08-20T08:27:21.000Z">
+<meta property="article:modified_time" content="2019-12-30T03:03:36.498Z">
+<meta property="article:author" content="殷海军">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.0.1" rel="stylesheet">
+
+<link href="/css/hl_theme/darcula.css?v=1.0.1" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js?v=1.0.1" ></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.0.1" ></script>
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="false">
+  <input class="theme_blog_path" value="">
+</div>
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/avatar.jpg" />
+</a>
+<div class="author">
+    <span>殷海军</span>
+</div>
+
+<div class="icon">
+    
+        
+        <a title="rss" href="/atom.xml" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-rss"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="github" href="https://github.com/haijunY" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="jianshu" href="https://www.jianshu.com/u/6caace1f4f18" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-jianshu"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="email" href="mailto:250556881@qq.com" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=250556881&site=qq&menu=yes" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-qq"></use>
+                </svg>
+            
+        </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li><div class="all active">全部文章<small>(49)</small></div></li>
+    
+        
+            
+            <li><div data-rel="技术框架">技术框架<small>(15)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="高并发">高并发<small>(7)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="其它">其它<small>(4)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="建站总结">建站总结<small>(4)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="summer">summer<small>(3)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="面试">面试<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="Java基础">Java基础<small>(7)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="中间件">中间件<small>(2)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="Spring">Spring<small>(3)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="软件工具">软件工具<small>(2)</small></div>
+                
+            </li>
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    </div>
+    <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="49">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="Search..." autocomplete="off"id="local-search-input" >
+        <i class="cross"></i>
+        <span>
+            <label for="tagswitch">Tags:</label>
+            <input id="tagswitch" type="checkbox" style="display: none" />
+            <i id="tagsWitchIcon"></i>
+        </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a class="color3">Mybatis</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">Servlet</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color2">Config</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color1">Dubbo</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color1">Springboot</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color4">Web</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color1">Layui</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">Springmvc</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">Thymeleaf</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">线程</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color2">Spring</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color2">锁</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">事务</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">日志</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">定时任务</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color4">云服务</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color1">maven</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">面试</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color4">TCP</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color4">JVM</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">反射</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color4">多线程</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">设计模式</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">集合</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color1">Redis</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color4">rabbitMQ</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color4">git</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a  class="技术框架 "
+           href="/Framework-DemoMybatis/"
+           data-tag="Mybatis"
+           data-author="" >
+            <span class="post-title" title="mybatis入门">mybatis入门</span>
+            <span class="post-date" title="2018-08-23 15:07:00">2018/08/23</span>
+        </a>
+        
+        <a  class="技术框架 "
+           href="/Framework-DemoServletAnnotationConfig/"
+           data-tag="Servlet,Config"
+           data-author="" >
+            <span class="post-title" title="servlet的注解配置">servlet的注解配置</span>
+            <span class="post-date" title="2018-08-23 15:07:00">2018/08/23</span>
+        </a>
+        
+        <a  class="技术框架 "
+           href="/Framework-DemoDubbo/"
+           data-tag="Dubbo"
+           data-author="" >
+            <span class="post-title" title="dubbo的简单示例">dubbo的简单示例</span>
+            <span class="post-date" title="2018-08-23 15:07:00">2018/08/23</span>
+        </a>
+        
+        <a  class="技术框架 "
+           href="/Framework-DemoDubboSpringboot/"
+           data-tag="Dubbo,Springboot"
+           data-author="" >
+            <span class="post-title" title="dubbo的springboot示例">dubbo的springboot示例</span>
+            <span class="post-date" title="2018-08-23 15:07:00">2018/08/23</span>
+        </a>
+        
+        <a  class="技术框架 "
+           href="/Framework-DemoSpringbootMybatis/"
+           data-tag="Mybatis,Springboot"
+           data-author="" >
+            <span class="post-title" title="springboot的mybatis示例">springboot的mybatis示例</span>
+            <span class="post-date" title="2018-08-23 15:07:00">2018/08/23</span>
+        </a>
+        
+        <a  class="技术框架 "
+           href="/Framework-DemoServletXmlConfig/"
+           data-tag="Servlet,Config"
+           data-author="" >
+            <span class="post-title" title="servlet的xml配置">servlet的xml配置</span>
+            <span class="post-date" title="2018-08-23 15:07:00">2018/08/23</span>
+        </a>
+        
+        <a  class="技术框架 "
+           href="/Framework-DemoSpringbootSimpleWeb/"
+           data-tag="Springboot,Web"
+           data-author="" >
+            <span class="post-title" title="springboot的简单web示例">springboot的简单web示例</span>
+            <span class="post-date" title="2018-08-23 15:07:00">2018/08/23</span>
+        </a>
+        
+        <a  class="技术框架 "
+           href="/Framework-DemoLayuiLoginAndPermission/"
+           data-tag="Layui"
+           data-author="" >
+            <span class="post-title" title="layui的一个登录和权限示例">layui的一个登录和权限示例</span>
+            <span class="post-date" title="2018-08-23 15:07:00">2018/08/23</span>
+        </a>
+        
+        <a  class="技术框架 "
+           href="/Framework-DemoSpringmvcThymeleaf/"
+           data-tag="Springmvc,Thymeleaf"
+           data-author="" >
+            <span class="post-title" title="springmvc的thymeleaf示例">springmvc的thymeleaf示例</span>
+            <span class="post-date" title="2018-08-23 15:07:00">2018/08/23</span>
+        </a>
+        
+        <a  class="技术框架 "
+           href="/Framework-DemoSpringbootThymeleaf/"
+           data-tag="Springboot,Thymeleaf"
+           data-author="" >
+            <span class="post-title" title="springboot的thymeleaf示例">springboot的thymeleaf示例</span>
+            <span class="post-date" title="2018-08-23 15:07:00">2018/08/23</span>
+        </a>
+        
+        <a  class="技术框架 "
+           href="/Framework-DemoSpringmvcXmlConfig/"
+           data-tag="Config,Springmvc"
+           data-author="" >
+            <span class="post-title" title="springmvc的xml配置">springmvc的xml配置</span>
+            <span class="post-date" title="2018-08-23 15:07:00">2018/08/23</span>
+        </a>
+        
+        <a  class="技术框架 "
+           href="/Framework-DubboAnnotationService/"
+           data-tag="Dubbo"
+           data-author="" >
+            <span class="post-title" title="dubbo的注解方式服务">dubbo的注解方式服务</span>
+            <span class="post-date" title="2018-08-23 15:07:00">2018/08/23</span>
+        </a>
+        
+        <a  class="技术框架 "
+           href="/Framework-SpringmvcPrinciple/"
+           data-tag="Springmvc"
+           data-author="" >
+            <span class="post-title" title="springmvc的工作原理">springmvc的工作原理</span>
+            <span class="post-date" title="2018-07-25 15:07:00">2018/07/25</span>
+        </a>
+        
+        <a  class="技术框架 "
+           href="/Framework-SpringmvcAnnotationConfig/"
+           data-tag="Springmvc"
+           data-author="" >
+            <span class="post-title" title="springmvc的注解配置">springmvc的注解配置</span>
+            <span class="post-date" title="2018-07-24 15:07:00">2018/07/24</span>
+        </a>
+        
+        <a  class="高并发 "
+           href="/HighConcurrency-AsynchronousProcess/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="异步处理">异步处理</span>
+            <span class="post-date" title="2018-07-25 15:07:00">2018/07/25</span>
+        </a>
+        
+        <a  class="高并发 "
+           href="/HighConcurrency-Overview/"
+           data-tag="线程"
+           data-author="" >
+            <span class="post-title" title="高并发概览">高并发概览</span>
+            <span class="post-date" title="2018-07-28 15:07:00">2018/07/28</span>
+        </a>
+        
+        <a  class="技术框架 "
+           href="/Framework-SpringbootPrinciple/"
+           data-tag="Springboot,Spring"
+           data-author="" >
+            <span class="post-title" title="springboot的原理">springboot的原理</span>
+            <span class="post-date" title="2018-08-23 15:07:00">2018/08/23</span>
+        </a>
+        
+        <a  class="高并发 "
+           href="/HighConcurrency-PessimisticLockAndOptimisticLock/"
+           data-tag="锁"
+           data-author="" >
+            <span class="post-title" title="悲观锁和乐观锁">悲观锁和乐观锁</span>
+            <span class="post-date" title="2018-07-28 15:07:00">2018/07/28</span>
+        </a>
+        
+        <a  class="高并发 "
+           href="/HighConcurrency-snychronized/"
+           data-tag="锁"
+           data-author="" >
+            <span class="post-title" title="snychronized">snychronized</span>
+            <span class="post-date" title="2018-07-28 15:07:00">2018/07/28</span>
+        </a>
+        
+        <a  class="高并发 "
+           href="/HighConcurrency-multithreading/"
+           data-tag="线程"
+           data-author="" >
+            <span class="post-title" title="多线程">多线程</span>
+            <span class="post-date" title="2018-07-28 15:07:00">2018/07/28</span>
+        </a>
+        
+        <a  class="高并发 "
+           href="/HighConcurrency-ProgrammaticAndDeclarativeTransactions/"
+           data-tag="事务"
+           data-author="" >
+            <span class="post-title" title="编程式事务和声明式事务">编程式事务和声明式事务</span>
+            <span class="post-date" title="2018-07-28 15:07:00">2018/07/28</span>
+        </a>
+        
+        <a  class="其它 "
+           href="/Other-LinuxCommand/"
+           data-tag="日志"
+           data-author="" >
+            <span class="post-title" title="Linux常用命令">Linux常用命令</span>
+            <span class="post-date" title="2018-09-18 15:07:00">2018/09/18</span>
+        </a>
+        
+        <a  class="高并发 "
+           href="/HighConcurrency-TimingTask/"
+           data-tag="定时任务"
+           data-author="" >
+            <span class="post-title" title="定时任务">定时任务</span>
+            <span class="post-date" title="2018-07-28 15:07:00">2018/07/28</span>
+        </a>
+        
+        <a  class="建站总结 "
+           href="/Station-BackgroundMusic/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="音乐外链">音乐外链</span>
+            <span class="post-date" title="2018-11-12 15:07:00">2018/11/12</span>
+        </a>
+        
+        <a  class="其它 "
+           href="/Other-UbuntuInstallTomcat/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ubuntu安装tomcat">ubuntu安装tomcat</span>
+            <span class="post-date" title="2018-09-20 15:07:00">2018/09/20</span>
+        </a>
+        
+        <a  class="建站总结 "
+           href="/Station-BackgroundPicture/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="背景图片">背景图片</span>
+            <span class="post-date" title="2018-11-12 15:07:00">2018/11/12</span>
+        </a>
+        
+        <a  class="其它 "
+           href="/Other-tengxunyun/"
+           data-tag="云服务"
+           data-author="" >
+            <span class="post-title" title="腾讯服务云部署">腾讯服务云部署</span>
+            <span class="post-date" title="2018-09-20 15:07:00">2018/09/20</span>
+        </a>
+        
+        <a  class="建站总结 "
+           href="/Station-HexoCommand/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="hexo常用命令">hexo常用命令</span>
+            <span class="post-date" title="2018-11-12 15:07:00">2018/11/12</span>
+        </a>
+        
+        <a  class=""
+           href="/hello-world/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Hello World">Hello World</span>
+            <span class="post-date" title="2019-12-30 16:34:01">2019/12/30</span>
+        </a>
+        
+        <a  class="其它 "
+           href="/Other-maven/"
+           data-tag="maven"
+           data-author="" >
+            <span class="post-title" title="maven命令">maven命令</span>
+            <span class="post-date" title="2018-09-28 15:07:00">2018/09/28</span>
+        </a>
+        
+        <a  class="summer "
+           href="/Summer-xxl-job/"
+           data-tag="定时任务"
+           data-author="" >
+            <span class="post-title" title="xxl-job">xxl-job</span>
+            <span class="post-date" title="2018-08-23 15:07:00">2018/08/23</span>
+        </a>
+        
+        <a  class="建站总结 "
+           href="/Station-HexoReadingCountAndComment/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Hexo博客的阅读统计和评论功能">Hexo博客的阅读统计和评论功能</span>
+            <span class="post-date" title="2018-11-12 15:07:00">2018/11/12</span>
+        </a>
+        
+        <a  class="面试 "
+           href="/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"
+           data-tag="面试"
+           data-author="" >
+            <span class="post-title" title="知识全总结">知识全总结</span>
+            <span class="post-date" title="2019-11-03 15:00:00">2019/11/03</span>
+        </a>
+        
+        <a  class="summer "
+           href="/Summer-Eureka/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="eureka">eureka</span>
+            <span class="post-date" title="2018-08-23 15:07:00">2018/08/23</span>
+        </a>
+        
+        <a  class="summer "
+           href="/Summer-Generator/"
+           data-tag="Mybatis"
+           data-author="" >
+            <span class="post-title" title="generator">generator</span>
+            <span class="post-date" title="2018-08-23 15:07:00">2018/08/23</span>
+        </a>
+        
+        <a  class="Java基础 "
+           href="/Java%E5%9F%BA%E7%A1%80/TCP/"
+           data-tag="TCP"
+           data-author="" >
+            <span class="post-title" title="TCP">TCP</span>
+            <span class="post-date" title="2019-11-03 15:00:00">2019/11/03</span>
+        </a>
+        
+        <a  class="Java基础 "
+           href="/Java%E5%9F%BA%E7%A1%80/JVM/"
+           data-tag="JVM"
+           data-author="" >
+            <span class="post-title" title="JVM">JVM</span>
+            <span class="post-date" title="2018-09-28 15:07:00">2018/09/28</span>
+        </a>
+        
+        <a  class="Java基础 "
+           href="/Java%E5%9F%BA%E7%A1%80/%E5%8F%8D%E5%B0%84/"
+           data-tag="反射"
+           data-author="" >
+            <span class="post-title" title="反射">反射</span>
+            <span class="post-date" title="2019-11-03 15:00:00">2019/11/03</span>
+        </a>
+        
+        <a  class="Java基础 "
+           href="/Java%E5%9F%BA%E7%A1%80/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"
+           data-tag="多线程"
+           data-author="" >
+            <span class="post-title" title="多线程">多线程</span>
+            <span class="post-date" title="2019-11-03 15:00:00">2019/11/03</span>
+        </a>
+        
+        <a  class="Java基础 "
+           href="/Java%E5%9F%BA%E7%A1%80/%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E5%8F%8A%E5%8C%85%E8%A3%85%E7%B1%BB/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="基本类型及包装类">基本类型及包装类</span>
+            <span class="post-date" title="2019-11-03 15:00:00">2019/11/03</span>
+        </a>
+        
+        <a  class="Java基础 "
+           href="/Java%E5%9F%BA%E7%A1%80/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="设计模式">设计模式</span>
+            <span class="post-date" title="2020-05-21 14:33:00">2020/05/21</span>
+        </a>
+        
+        <a  class="Java基础 "
+           href="/Java%E5%9F%BA%E7%A1%80/%E9%9B%86%E5%90%88/"
+           data-tag="集合"
+           data-author="" >
+            <span class="post-title" title="集合">集合</span>
+            <span class="post-date" title="2019-11-03 15:00:00">2019/11/03</span>
+        </a>
+        
+        <a  class="中间件 "
+           href="/%E4%B8%AD%E9%97%B4%E4%BB%B6/Redis/"
+           data-tag="Redis"
+           data-author="" >
+            <span class="post-title" title="Redis">Redis</span>
+            <span class="post-date" title="2019-09-03 15:00:00">2019/09/03</span>
+        </a>
+        
+        <a  class="中间件 "
+           href="/%E4%B8%AD%E9%97%B4%E4%BB%B6/rabbitMQ/"
+           data-tag="rabbitMQ"
+           data-author="" >
+            <span class="post-title" title="rabbitMQ">rabbitMQ</span>
+            <span class="post-date" title="2018-06-12 15:07:00">2018/06/12</span>
+        </a>
+        
+        <a  class="Spring "
+           href="/Spring/Spring/"
+           data-tag="Spring"
+           data-author="" >
+            <span class="post-title" title="Spring">Spring</span>
+            <span class="post-date" title="2019-11-03 15:00:00">2019/11/03</span>
+        </a>
+        
+        <a  class="软件工具 "
+           href="/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/Software-git/"
+           data-tag="git"
+           data-author="" >
+            <span class="post-title" title="git使用">git使用</span>
+            <span class="post-date" title="2018-06-12 15:07:00">2018/06/12</span>
+        </a>
+        
+        <a  class="Spring "
+           href="/Spring/Spring-%E4%BA%8B%E5%8A%A1/"
+           data-tag="Spring,事务"
+           data-author="" >
+            <span class="post-title" title="Spring事务">Spring事务</span>
+            <span class="post-date" title="2019-11-03 15:00:00">2019/11/03</span>
+        </a>
+        
+        <a  class="Spring "
+           href="/Spring/Spring-IOC/"
+           data-tag="Spring"
+           data-author="" >
+            <span class="post-title" title="IOC">IOC</span>
+            <span class="post-date" title="2020-05-21 14:33:00">2020/05/21</span>
+        </a>
+        
+        <a  class="软件工具 "
+           href="/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/Software-sublime/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="sublime使用">sublime使用</span>
+            <span class="post-date" title="2018-10-12 15:07:00">2018/10/12</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="post-中间件/rabbitMQ" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">rabbitMQ</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+                <a  data-rel="中间件">中间件</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a class="color4">rabbitMQ</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2020-05-25 17:49:08'>2018-06-12 15:07</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#应用场景"><span class="toc-text">应用场景</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#应用解耦"><span class="toc-text">应用解耦</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#流量削峰"><span class="toc-text">流量削峰</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#异步处理"><span class="toc-text">异步处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分布式事务"><span class="toc-text">分布式事务</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六种工作模式"><span class="toc-text">六种工作模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、simple简单模式"><span class="toc-text">1、simple简单模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、work工作模式"><span class="toc-text">2、work工作模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、publish-subscrible发布订阅模式"><span class="toc-text">3、publish&#x2F;subscrible发布订阅模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、routing路由模式"><span class="toc-text">4、routing路由模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、topic主题模式（路由模式的一种）"><span class="toc-text">5、topic主题模式（路由模式的一种）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6、RPC"><span class="toc-text">6、RPC</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#事务-Confirm"><span class="toc-text">事务+Confirm</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#事务机制"><span class="toc-text">事务机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Confirm模式"><span class="toc-text">Confirm模式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#开启confirm模式"><span class="toc-text">开启confirm模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#消息确认"><span class="toc-text">消息确认</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其它问题"><span class="toc-text">其它问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、消息基于什么传输，这样做的优点？"><span class="toc-text">1、消息基于什么传输，这样做的优点？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、exchange交换机和绑定routing-key"><span class="toc-text">2、exchange交换机和绑定routing key</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分布式事务-1"><span class="toc-text">分布式事务</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><h3 id="应用解耦"><a href="#应用解耦" class="headerlink" title="应用解耦"></a>应用解耦</h3><h3 id="流量削峰"><a href="#流量削峰" class="headerlink" title="流量削峰"></a>流量削峰</h3><p>比如秒杀系统，在短时间内访问压力骤增，此时有两种处理方式：</p>
+<p>1.上游队列缓冲，限速发送</p>
+<p>2.下游队列缓冲，限速执行</p>
+<p>常见的场景是采用第二种方式，不影响客户使用的相应速度和使用体验</p>
+<h3 id="异步处理"><a href="#异步处理" class="headerlink" title="异步处理"></a>异步处理</h3><h3 id="分布式事务"><a href="#分布式事务" class="headerlink" title="分布式事务"></a>分布式事务</h3><p>基本原理：保证最终一次性（AP）</p>
+<p>比如有两个系统，订单和库存</p>
+<p>订单</p>
+<h2 id="六种工作模式"><a href="#六种工作模式" class="headerlink" title="六种工作模式"></a>六种工作模式</h2><h3 id="1、simple简单模式"><a href="#1、simple简单模式" class="headerlink" title="1、simple简单模式"></a>1、simple简单模式</h3><img src="../../images/rabbitMQ-简单模式.png">
+
+<p>生产者产生消息放入队列，消费者监听消息队列，如果队列中有消息，消息被拿走后，自动从队列中移除（隐患：消息可能未被消费者正确处理就被删除了），应用场景：聊天</p>
+<h3 id="2、work工作模式"><a href="#2、work工作模式" class="headerlink" title="2、work工作模式"></a>2、work工作模式</h3><img src="../../images/rabbitMQ-工作模式.png">
+
+<p>消息生产者将消息放入队列消费者可以有多个，消费者1、消费者2，同时监听同一个队列，C1、C2同时争抢消息，谁先拿到谁负责消费（隐患：高并发场景下，会产生某一个消息被多个消费者共同使用，可以设置一个开关syncronize，保证一条消息只能被一个消费者使用），场景：红包</p>
+<h3 id="3、publish-subscrible发布订阅模式"><a href="#3、publish-subscrible发布订阅模式" class="headerlink" title="3、publish/subscrible发布订阅模式"></a>3、publish/subscrible发布订阅模式</h3><img src="../../images/rabbitMQ-发布订阅模式.png">
+
+<p>X代表交换机，是rabbitMQ的内部组件，生成者将消息放入交换机，交换机发布订阅把所有消息放入所有队列中，对应的消费者都拿到消息消费，场景：群聊天，广播</p>
+<h3 id="4、routing路由模式"><a href="#4、routing路由模式" class="headerlink" title="4、routing路由模式"></a>4、routing路由模式</h3><img src="../../images/rabbitMQ-路由模式.png">
+
+<p>消息生产者将消息发送给交换机按照路由判断，交换机根据路由进行放入队列，最终对应的消费者才能消费</p>
+<h3 id="5、topic主题模式（路由模式的一种）"><a href="#5、topic主题模式（路由模式的一种）" class="headerlink" title="5、topic主题模式（路由模式的一种）"></a>5、topic主题模式（路由模式的一种）</h3><img src="../../images/rabbitMQ-主题模式.png">
+
+<p>星号井号代表通配符，也就是说路由可以模糊匹配</p>
+<h3 id="6、RPC"><a href="#6、RPC" class="headerlink" title="6、RPC"></a>6、RPC</h3><h2 id="事务-Confirm"><a href="#事务-Confirm" class="headerlink" title="事务+Confirm"></a>事务+Confirm</h2><h3 id="事务机制"><a href="#事务机制" class="headerlink" title="事务机制"></a>事务机制</h3><p>RabbitMQ中与事务机制有关的方法有三个：txSelect()、txCommit()、txRollback()，toSelect用于将当前channel设置成transaction模式，toCommit用于提交事务，toRollback用于回滚事务</p>
+<h3 id="Confirm模式"><a href="#Confirm模式" class="headerlink" title="Confirm模式"></a>Confirm模式</h3><p>采用事务模式会降低RabbitMQ的吞吐量，Confirm模式是有效解决此问题的</p>
+<p>生产者将channel设置成confirm模式，所有在该信道上发布的消息都会被指派一个位于的ID，一旦消息被投递到所匹配的队列后，broker就会发送一个确认给生产者（包含消息的唯一ID），这就使得生产者知道消息已经正确到达目的队列了，如果消息和队列是可持久化的，那么确认消息会将消息写入磁盘之后发出，broker回传给生产者的确认消息中deliver-tag域包含了确认消息的序号，此外broker也可以设置成basic.ask的multiple域，表示到这个消息之前的所有消息都得到了处理</p>
+<p>confirm模式的最大好处在于它是异步的，一旦发布一条消息，生产者应用程序就可以在等信道返回确认的同事发送下一条消息，当消息得到最终确认后，生产者应用便可以通过回调方法来处理该确认消息，如果RabbitMQ因为自身内部错误导致消息丢失，就会发送一条nack信息，生产者应用程序同样可以在回调方法中处理该nack信息</p>
+<h4 id="开启confirm模式"><a href="#开启confirm模式" class="headerlink" title="开启confirm模式"></a>开启confirm模式</h4><p>生产者通过调用channel的confirmSelect()方法将channel设置成confirm模式，如果没有设置no-wait标志的话，broker就会返回comfirm.select-ok表示同意(从目前RabbitMQ最新版本3.6来看，如果调用了channel.confirmSelect方法，默认情况下是直接将no-wait设置成false的，也就是默认情况下broker是必须回传confirm.select-ok的)。 </p>
+<h4 id="消息确认"><a href="#消息确认" class="headerlink" title="消息确认"></a>消息确认</h4><p>为了保证消息从队列可靠地到达消费者，RabbitMQ提供消息确认机制，消费者在声明队列时，可指定noAck参数，当noAck=false时，RabbitMQ会等待消费者显示发回ack信号后才从内存中移除消息，否则，RabbitMQ会在队列中消息被消费后立即删除它</p>
+<p>当noAck=false时，对于RabbitMQ而言，队列中的消息分为了两部分：一部分是等待投递给消费者的消息，一部分是已经投递给消费者，但是还么有收到ack信号的消息。如果服务端一直没有收到ack信号，并且消费此消息的消费者已经断开连接，则服务器端会安排该消息重新更新进入队列，等待投递给下一个消费者（也可能是原来那个消费者）</p>
+<h3 id="其它问题"><a href="#其它问题" class="headerlink" title="其它问题"></a>其它问题</h3><h4 id="1、消息基于什么传输，这样做的优点？"><a href="#1、消息基于什么传输，这样做的优点？" class="headerlink" title="1、消息基于什么传输，这样做的优点？"></a>1、消息基于什么传输，这样做的优点？</h4><p>Channel信道</p>
+<p>信道是生产者和消费者与rabbit通信的渠道，信道是建立在TCP连接上的虚拟连接，rabbitMQ在一条TCP上建立成百上千个信道来达到多个线程处理，这个TCP被多个线程共享，每个线程对应一个信道，信道在rabbit上都有唯一的ID，保证了信道的私有性</p>
+<p>疑问：为什么不创建多个TCP连接呢，原因是rabbit保证性能，系统每个线程去开辟一个TCP是非常消耗性能的，每秒成百上千的建立销毁TCP会严重销耗系统性能</p>
+<p>类似概念：TCP是电缆，信道是里面的光纤，每个光纤是独立的，互不影响</p>
+<h4 id="2、exchange交换机和绑定routing-key"><a href="#2、exchange交换机和绑定routing-key" class="headerlink" title="2、exchange交换机和绑定routing key"></a>2、exchange交换机和绑定routing key</h4><p>exchange的作用类似路由器，routing key类似路由键，服务器会根据路由键将消息从交换机路由到队列上去</p>
+<p>exchange的种类：direct、fanout、topic、header。前三种类似集合关系那样：direct(1:1)、fanout(1:N)、topic(N:1)</p>
+<h3 id="分布式事务-1"><a href="#分布式事务-1" class="headerlink" title="分布式事务"></a>分布式事务</h3><p>利用rabbitMQ的confirm模式及消息确认机制可以处理分布式事务，</p>
+<p>举例说明：订单系统和库存系统</p>
+<p>​    首先，订单系统表设计：一张业务表，一张消息表（用于重试），库存系统表设计：一张业务表，一张消息表（用于幂等）</p>
+<p>​    一笔请求进来后，首先在订单系统的消息表中插入一条数据未发送，然后向rabbitMQ发送该条消息，然后处理业务，监听rabbitMQ到回执后，更新消息的状态为已发送。对于库存系统，首先收到消息后，去表里面判断重复，如果已经处理直接返回noAck=ture，如果未处理，首先插入消息表并设置状态为待处理，然后处理库存扣减业务，然后更新消息表状态为已处理，并向rabbitMQ发送noAck=true</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 250556881@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>rabbitMQ</p>
+    
+    <p><span class="copy-title">本文作者:</span><a  title="殷海军">殷海军</a></p>
+    <p><span class="copy-title">发布时间:</span>2018-06-12, 15:07:00</p>
+    <p><span class="copy-title">最后更新:</span>2020-05-25, 17:49:08</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/%E4%B8%AD%E9%97%B4%E4%BB%B6/rabbitMQ/" title="rabbitMQ">http://yoursite.com/%E4%B8%AD%E9%97%B4%E4%BB%B6/rabbitMQ/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">©2016-2019 Yelog</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+<div class="acParent"></div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.0.1" ></script>
+
+<script src="/js/script.js?v=1.0.1" ></script>
+<script>
+    var img_resize = 'default';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['#Mybatis','#Servlet','#Config','#Dubbo','#Springboot','#Web','#Layui','#Springmvc','#Thymeleaf','#线程','#Spring','#锁','#事务','#日志','#定时任务','#云服务','#maven','#面试','#TCP','#JVM','#反射','#多线程','#设计模式','#集合','#Redis','#rabbitMQ','#git',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().split('\n').length - 1, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: ;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+        .nav .hide-list.fullscreen {
+            left: 492px
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
+        border: #e2dede solid 1px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://i.loli.net/2019/07/22/5d3521411f3f169375.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+    .post .pjax article :not(pre) > code {
+        color: #24292e;
+        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+        background-color: rgba(27,31,35,.05);
+        border-radius: 3px;
+        font-size: 85%;
+        margin: 0;
+        padding: .2em .4em;
+    }
+    
+</style>
+
+
+
+
+
+
+
+</html>
