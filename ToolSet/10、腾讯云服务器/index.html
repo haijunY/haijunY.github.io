@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>10、腾讯服务云部署 | 精于心 简于形</title>
+  <meta name="keywords" content=" 云服务 ">
+  <meta name="description" content="10、腾讯服务云部署 | 精于心 简于形">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="本站是由github+hexo+nexT搭建的，至于搭建过程，参考博客,建立博客的目的主要是为了总结自己平时所遇到的技术问题，点点滴滴，这样遇到问题就不用到处去百度了">
+<meta property="og:type" content="website">
+<meta property="og:title" content="关于">
+<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta property="og:site_name" content="精于心 简于形">
+<meta property="og:description" content="本站是由github+hexo+nexT搭建的，至于搭建过程，参考博客,建立博客的目的主要是为了总结自己平时所遇到的技术问题，点点滴滴，这样遇到问题就不用到处去百度了">
+<meta property="article:published_time" content="2018-08-17T03:30:49.000Z">
+<meta property="article:modified_time" content="2019-12-30T03:03:36.497Z">
+<meta property="article:author" content="殷海军">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.0.1" rel="stylesheet">
+
+<link href="/css/hl_theme/darcula.css?v=1.0.1" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js?v=1.0.1" ></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.0.1" ></script>
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="false">
+  <input class="theme_blog_path" value="">
+</div>
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/avatar.jpg" />
+</a>
+<div class="author">
+    <span>殷海军</span>
+</div>
+
+<div class="icon">
+    
+        
+        <a title="rss" href="/atom.xml" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-rss"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="github" href="https://github.com/haijunY" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="jianshu" href="https://www.jianshu.com/u/6caace1f4f18" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-jianshu"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="email" href="mailto:250556881@qq.com" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=250556881&site=qq&menu=yes" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-qq"></use>
+                </svg>
+            
+        </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li><div class="all active">全部文章<small>(55)</small></div></li>
+    
+        
+            
+            <li><div data-rel="建站总结">建站总结<small>(4)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="Java基础">Java基础<small>(9)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="FrameDubbo">FrameDubbo<small>(2)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="BasicDesignpattern">BasicDesignpattern<small>(5)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="FrameLayui">FrameLayui<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="FrameMybatis">FrameMybatis<small>(3)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="FrameServlet">FrameServlet<small>(2)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="FrameSpring">FrameSpring<small>(7)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="FrameSpringmvc">FrameSpringmvc<small>(4)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="SpringCloudEureka">SpringCloudEureka<small>(2)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="SpringCloudGateway">SpringCloudGateway<small>(3)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="SpringClouldGateway">SpringClouldGateway<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="ToolSet">ToolSet<small>(11)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="微服务">微服务<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    </div>
+    <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="55">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="Search..." autocomplete="off"id="local-search-input" >
+        <i class="cross"></i>
+        <span>
+            <label for="tagswitch">Tags:</label>
+            <input id="tagswitch" type="checkbox" style="display: none" />
+            <i id="tagsWitchIcon"></i>
+        </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a class="color3">集合</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">异常</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">反射</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color4">多线程</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">克隆</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color4">JUC</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color4">TCP</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color4">JVM</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color1">Dubbo</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color1">Springboot</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">设计模式</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color1">Layui</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">Mybatis</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">事务</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">Servlet</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color2">Config</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color2">Spring</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">定时任务</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">Thymeleaf</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color4">Web</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">Springmvc</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">Hystrix</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">Gateway</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color4">云服务</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color4">rabbitMQ</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color1">Mysql</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color1">Redis</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color4">git</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">日志</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color1">maven</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a  class="建站总结 "
+           href="/Hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E9%98%85%E8%AF%BB%E7%BB%9F%E8%AE%A1%E5%92%8C%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Hexo博客的阅读统计和评论功能">Hexo博客的阅读统计和评论功能</span>
+            <span class="post-date" title="2018-11-12 15:07:00">2018/11/12</span>
+        </a>
+        
+        <a  class="建站总结 "
+           href="/%E8%83%8C%E6%99%AF%E9%9F%B3%E4%B9%90/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="音乐外链">音乐外链</span>
+            <span class="post-date" title="2018-11-12 15:07:00">2018/11/12</span>
+        </a>
+        
+        <a  class="建站总结 "
+           href="/Hexo%E5%91%BD%E4%BB%A4/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="hexo常用命令">hexo常用命令</span>
+            <span class="post-date" title="2018-11-12 15:07:00">2018/11/12</span>
+        </a>
+        
+        <a  class="建站总结 "
+           href="/%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="背景图片">背景图片</span>
+            <span class="post-date" title="2018-11-12 15:07:00">2018/11/12</span>
+        </a>
+        
+        <a  class="Java基础 "
+           href="/BasicJdk/1%E3%80%81%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E5%8F%8A%E5%8C%85%E8%A3%85%E7%B1%BB/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="1、基本类型及包装类">1、基本类型及包装类</span>
+            <span class="post-date" title="2019-11-03 15:00:00">2019/11/03</span>
+        </a>
+        
+        <a  class="Java基础 "
+           href="/BasicJdk/2%E3%80%81%E9%9B%86%E5%90%88/"
+           data-tag="集合"
+           data-author="" >
+            <span class="post-title" title="集合">集合</span>
+            <span class="post-date" title="2019-11-03 15:00:00">2019/11/03</span>
+        </a>
+        
+        <a  class="Java基础 "
+           href="/BasicJdk/4%E3%80%81%E5%BC%82%E5%B8%B8/"
+           data-tag="异常"
+           data-author="" >
+            <span class="post-title" title="4、异常">4、异常</span>
+            <span class="post-date" title="2019-11-03 15:00:00">2019/11/03</span>
+        </a>
+        
+        <a  class="Java基础 "
+           href="/BasicJdk/3%E3%80%81%E5%8F%8D%E5%B0%84/"
+           data-tag="反射"
+           data-author="" >
+            <span class="post-title" title="3、反射">3、反射</span>
+            <span class="post-date" title="2019-11-03 15:00:00">2019/11/03</span>
+        </a>
+        
+        <a  class="Java基础 "
+           href="/BasicJdk/6%E3%80%81%E5%A4%9A%E7%BA%BF%E7%A8%8B/"
+           data-tag="多线程"
+           data-author="" >
+            <span class="post-title" title="6、多线程">6、多线程</span>
+            <span class="post-date" title="2019-11-03 15:00:00">2019/11/03</span>
+        </a>
+        
+        <a  class="Java基础 "
+           href="/BasicJdk/5%E3%80%81%E5%85%8B%E9%9A%86/"
+           data-tag="克隆"
+           data-author="" >
+            <span class="post-title" title="5、克隆">5、克隆</span>
+            <span class="post-date" title="2017-01-03 15:00:00">2017/01/03</span>
+        </a>
+        
+        <a  class="Java基础 "
+           href="/BasicJdk/7%E3%80%81JUC/"
+           data-tag="JUC"
+           data-author="" >
+            <span class="post-title" title="7、JUC">7、JUC</span>
+            <span class="post-date" title="2019-11-03 15:00:00">2019/11/03</span>
+        </a>
+        
+        <a  class="Java基础 "
+           href="/BasicJdk/9%E3%80%81TCP/"
+           data-tag="TCP"
+           data-author="" >
+            <span class="post-title" title="9、TCP">9、TCP</span>
+            <span class="post-date" title="2019-11-03 15:00:00">2019/11/03</span>
+        </a>
+        
+        <a  class="Java基础 "
+           href="/BasicJdk/8%E3%80%81JVM/"
+           data-tag="JVM"
+           data-author="" >
+            <span class="post-title" title="8、JVM">8、JVM</span>
+            <span class="post-date" title="2018-09-28 15:07:00">2018/09/28</span>
+        </a>
+        
+        <a  class="FrameDubbo "
+           href="/FrameDubbo/1%E3%80%81Dubbo%E5%85%A5%E9%97%A8/"
+           data-tag="Dubbo"
+           data-author="" >
+            <span class="post-title" title="1、dubbo入门">1、dubbo入门</span>
+            <span class="post-date" title="2018-08-23 15:07:00">2018/08/23</span>
+        </a>
+        
+        <a  class="FrameDubbo "
+           href="/FrameDubbo/2%E3%80%81DubboSpringboot%E6%95%B4%E5%90%88/"
+           data-tag="Dubbo,Springboot"
+           data-author="" >
+            <span class="post-title" title="2、DubboSpringboot整合">2、DubboSpringboot整合</span>
+            <span class="post-date" title="2018-08-23 15:07:00">2018/08/23</span>
+        </a>
+        
+        <a  class="BasicDesignpattern "
+           href="/BasicDesignpattern/1%E3%80%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B8%83%E5%A4%A7%E5%8E%9F%E5%88%99/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="1、设计模式七大原则">1、设计模式七大原则</span>
+            <span class="post-date" title="2020-05-21 14:33:00">2020/05/21</span>
+        </a>
+        
+        <a  class="BasicDesignpattern "
+           href="/BasicDesignpattern/2%E3%80%81%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="2、单例模式">2、单例模式</span>
+            <span class="post-date" title="2020-05-21 14:34:00">2020/05/21</span>
+        </a>
+        
+        <a  class="BasicDesignpattern "
+           href="/BasicDesignpattern/3%E3%80%81%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="3、工厂模式">3、工厂模式</span>
+            <span class="post-date" title="2020-05-21 14:35:00">2020/05/21</span>
+        </a>
+        
+        <a  class="BasicDesignpattern "
+           href="/BasicDesignpattern/5%E3%80%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%80%BB%E7%BB%93/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="5、设计模式总结">5、设计模式总结</span>
+            <span class="post-date" title="2020-05-26 14:33:00">2020/05/26</span>
+        </a>
+        
+        <a  class="BasicDesignpattern "
+           href="/BasicDesignpattern/4%E3%80%81%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F/"
+           data-tag="设计模式"
+           data-author="" >
+            <span class="post-title" title="4、代理模式">4、代理模式</span>
+            <span class="post-date" title="2020-05-21 14:36:00">2020/05/21</span>
+        </a>
+        
+        <a  class="FrameLayui "
+           href="/FrameLayui/1%E3%80%81Layui%E7%99%BB%E5%BD%95%E5%92%8C%E6%9D%83%E9%99%90%E7%A4%BA%E4%BE%8B/"
+           data-tag="Layui"
+           data-author="" >
+            <span class="post-title" title="1、Layui登录和权限示例">1、Layui登录和权限示例</span>
+            <span class="post-date" title="2018-08-23 15:07:00">2018/08/23</span>
+        </a>
+        
+        <a  class="FrameMybatis "
+           href="/FrameMybatis/1%E3%80%81Mybatis%E5%85%A5%E9%97%A8/"
+           data-tag="Mybatis"
+           data-author="" >
+            <span class="post-title" title="1、Mybatis入门">1、Mybatis入门</span>
+            <span class="post-date" title="2018-08-23 15:07:00">2018/08/23</span>
+        </a>
+        
+        <a  class="FrameMybatis "
+           href="/FrameMybatis/3%E3%80%81%E7%BC%96%E7%A8%8B%E5%BC%8F%E4%BA%8B%E5%8A%A1%E4%B8%8E%E5%A3%B0%E6%98%8E%E5%BC%8F%E4%BA%8B%E5%8A%A1/"
+           data-tag="事务"
+           data-author="" >
+            <span class="post-title" title="3、编程式事务与声明式事务">3、编程式事务与声明式事务</span>
+            <span class="post-date" title="2018-07-28 15:07:00">2018/07/28</span>
+        </a>
+        
+        <a  class="FrameMybatis "
+           href="/FrameMybatis/2%E3%80%81SpringbootMybatis%E6%95%B4%E5%90%88/"
+           data-tag="Springboot,Mybatis"
+           data-author="" >
+            <span class="post-title" title="2、SpringbootMybatis整合">2、SpringbootMybatis整合</span>
+            <span class="post-date" title="2018-08-23 15:07:00">2018/08/23</span>
+        </a>
+        
+        <a  class="FrameServlet "
+           href="/FrameServlet/1%E3%80%81ServletXml%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F/"
+           data-tag="Servlet,Config"
+           data-author="" >
+            <span class="post-title" title="1、ServletXml配置方式">1、ServletXml配置方式</span>
+            <span class="post-date" title="2018-08-23 15:07:00">2018/08/23</span>
+        </a>
+        
+        <a  class="FrameServlet "
+           href="/FrameServlet/2%E3%80%81Servlet%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F/"
+           data-tag="Servlet,Config"
+           data-author="" >
+            <span class="post-title" title="2、Servlet注解配置方式">2、Servlet注解配置方式</span>
+            <span class="post-date" title="2018-08-23 15:07:00">2018/08/23</span>
+        </a>
+        
+        <a  class="FrameSpring "
+           href="/FrameSpring/1%E3%80%81Spring/"
+           data-tag="Spring"
+           data-author="" >
+            <span class="post-title" title="1、Spring">1、Spring</span>
+            <span class="post-date" title="2019-11-03 15:00:00">2019/11/03</span>
+        </a>
+        
+        <a  class="FrameSpring "
+           href="/FrameSpring/2%E3%80%81Spring-IOC/"
+           data-tag="Spring"
+           data-author="" >
+            <span class="post-title" title="2、Spring-IOC">2、Spring-IOC</span>
+            <span class="post-date" title="2020-05-21 14:33:00">2020/05/21</span>
+        </a>
+        
+        <a  class="FrameSpring "
+           href="/FrameSpring/3%E3%80%81Spring-%E4%BA%8B%E5%8A%A1/"
+           data-tag="事务,Spring"
+           data-author="" >
+            <span class="post-title" title="3、Spring事务">3、Spring事务</span>
+            <span class="post-date" title="2019-11-03 15:00:00">2019/11/03</span>
+        </a>
+        
+        <a  class="FrameSpring "
+           href="/FrameSpring/4%E3%80%81%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/"
+           data-tag="定时任务"
+           data-author="" >
+            <span class="post-title" title="4、定时任务">4、定时任务</span>
+            <span class="post-date" title="2018-07-28 15:07:00">2018/07/28</span>
+        </a>
+        
+        <a  class="FrameSpring "
+           href="/FrameSpring/7%E3%80%81Springboot%E5%8E%9F%E7%90%86/"
+           data-tag="Springboot,Spring"
+           data-author="" >
+            <span class="post-title" title="7、Springboot原理">7、Springboot原理</span>
+            <span class="post-date" title="2018-08-23 15:07:00">2018/08/23</span>
+        </a>
+        
+        <a  class="FrameSpring "
+           href="/FrameSpring/6%E3%80%81SpringbootThymeleaf%E7%A4%BA%E4%BE%8B/"
+           data-tag="Springboot,Thymeleaf"
+           data-author="" >
+            <span class="post-title" title="6、SpringbootThymeleaf示例">6、SpringbootThymeleaf示例</span>
+            <span class="post-date" title="2018-08-23 15:07:00">2018/08/23</span>
+        </a>
+        
+        <a  class="FrameSpring "
+           href="/FrameSpring/5%E3%80%81Springboot%E7%AE%80%E5%8D%95Web%E7%A4%BA%E4%BE%8B/"
+           data-tag="Springboot,Web"
+           data-author="" >
+            <span class="post-title" title="5、Springboot简单Web示例">5、Springboot简单Web示例</span>
+            <span class="post-date" title="2018-08-23 15:07:00">2018/08/23</span>
+        </a>
+        
+        <a  class="FrameSpringmvc "
+           href="/FrameSpringmvc/1%E3%80%81SpringmvcXml%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F/"
+           data-tag="Config,Springmvc"
+           data-author="" >
+            <span class="post-title" title="1、SpringmvcXml配置方式">1、SpringmvcXml配置方式</span>
+            <span class="post-date" title="2018-08-23 15:07:00">2018/08/23</span>
+        </a>
+        
+        <a  class="FrameSpringmvc "
+           href="/FrameSpringmvc/2%E3%80%81Springmvc%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F/"
+           data-tag="Springmvc"
+           data-author="" >
+            <span class="post-title" title="2、Springmvc注解配置方式">2、Springmvc注解配置方式</span>
+            <span class="post-date" title="2018-07-24 15:07:00">2018/07/24</span>
+        </a>
+        
+        <a  class="SpringCloudEureka "
+           href="/SpringCloudEureka/1%E3%80%81Eureka/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="1、Eureka">1、Eureka</span>
+            <span class="post-date" title="2018-08-23 15:07:00">2018/08/23</span>
+        </a>
+        
+        <a  class="FrameSpringmvc "
+           href="/FrameSpringmvc/3%E3%80%81Springmvc%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/"
+           data-tag="Springmvc"
+           data-author="" >
+            <span class="post-title" title="3、Springmvc工作原理">3、Springmvc工作原理</span>
+            <span class="post-date" title="2018-07-25 15:07:00">2018/07/25</span>
+        </a>
+        
+        <a  class="SpringCloudEureka "
+           href="/SpringCloudEureka/2%E3%80%81Hystrix/"
+           data-tag="Hystrix"
+           data-author="" >
+            <span class="post-title" title="2、Hystrix">2、Hystrix</span>
+            <span class="post-date" title="2019-11-03 15:00:00">2019/11/03</span>
+        </a>
+        
+        <a  class="FrameSpringmvc "
+           href="/FrameSpringmvc/4%E3%80%81SpringmvcThymeleaf%E7%A4%BA%E4%BE%8B/"
+           data-tag="Thymeleaf,Springmvc"
+           data-author="" >
+            <span class="post-title" title="4、SpringmvcThymeleaf示例">4、SpringmvcThymeleaf示例</span>
+            <span class="post-date" title="2018-08-23 15:07:00">2018/08/23</span>
+        </a>
+        
+        <a  class="SpringCloudGateway "
+           href="/SpringCloudGateway/2%E3%80%81SpringCloudGateway%E6%96%AD%E8%A8%80/"
+           data-tag="Gateway"
+           data-author="" >
+            <span class="post-title" title="2、SpringCloudGateway断言">2、SpringCloudGateway断言</span>
+            <span class="post-date" title="2020-06-03 15:00:00">2020/06/03</span>
+        </a>
+        
+        <a  class="SpringClouldGateway "
+           href="/SpringCloudGateway/1%E3%80%81SpringCloudGateway%E5%85%A5%E9%97%A8/"
+           data-tag="Gateway"
+           data-author="" >
+            <span class="post-title" title="1、SpringClouldGateway入门">1、SpringClouldGateway入门</span>
+            <span class="post-date" title="2020-06-03 15:00:00">2020/06/03</span>
+        </a>
+        
+        <a  class="SpringCloudGateway "
+           href="/SpringCloudGateway/4%E3%80%81SpringCloudGateway%E9%99%90%E6%B5%81/"
+           data-tag="Gateway"
+           data-author="" >
+            <span class="post-title" title="4、SpringClouldGateway限流">4、SpringClouldGateway限流</span>
+            <span class="post-date" title="2020-06-03 15:00:00">2020/06/03</span>
+        </a>
+        
+        <a  class="ToolSet "
+           href="/ToolSet/10%E3%80%81%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"
+           data-tag="云服务"
+           data-author="" >
+            <span class="post-title" title="10、腾讯服务云部署">10、腾讯服务云部署</span>
+            <span class="post-date" title="2018-09-20 15:07:00">2018/09/20</span>
+        </a>
+        
+        <a  class="ToolSet "
+           href="/ToolSet/1%E3%80%81%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E5%B7%A5%E5%85%B7/"
+           data-tag="Mybatis"
+           data-author="" >
+            <span class="post-title" title="1、自动生成代码工具">1、自动生成代码工具</span>
+            <span class="post-date" title="2018-08-23 15:07:00">2018/08/23</span>
+        </a>
+        
+        <a  class="ToolSet "
+           href="/ToolSet/11%E3%80%81ubuntu%E5%AE%89%E8%A3%85tomcat/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="11、ubuntu安装tomcat">11、ubuntu安装tomcat</span>
+            <span class="post-date" title="2018-09-20 15:07:00">2018/09/20</span>
+        </a>
+        
+        <a  class="ToolSet "
+           href="/ToolSet/2%E3%80%81xxl-job/"
+           data-tag="定时任务"
+           data-author="" >
+            <span class="post-title" title="2、xxl-job">2、xxl-job</span>
+            <span class="post-date" title="2018-08-23 15:07:00">2018/08/23</span>
+        </a>
+        
+        <a  class="ToolSet "
+           href="/ToolSet/4%E3%80%81RabbitMQ/"
+           data-tag="rabbitMQ"
+           data-author="" >
+            <span class="post-title" title="4、RabbitMQ">4、RabbitMQ</span>
+            <span class="post-date" title="2018-06-12 15:07:00">2018/06/12</span>
+        </a>
+        
+        <a  class="ToolSet "
+           href="/ToolSet/3%E3%80%81Mysql/"
+           data-tag="Mysql"
+           data-author="" >
+            <span class="post-title" title="3、Mysql">3、Mysql</span>
+            <span class="post-date" title="2019-09-03 15:00:00">2019/09/03</span>
+        </a>
+        
+        <a  class="ToolSet "
+           href="/ToolSet/5%E3%80%81Redis/"
+           data-tag="Redis"
+           data-author="" >
+            <span class="post-title" title="5、Redis">5、Redis</span>
+            <span class="post-date" title="2019-09-03 15:00:00">2019/09/03</span>
+        </a>
+        
+        <a  class="ToolSet "
+           href="/ToolSet/6%E3%80%81git/"
+           data-tag="git"
+           data-author="" >
+            <span class="post-title" title="6、git使用">6、git使用</span>
+            <span class="post-date" title="2018-06-12 15:07:00">2018/06/12</span>
+        </a>
+        
+        <a  class="ToolSet "
+           href="/ToolSet/7%E3%80%81sublime/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="7、sublime使用">7、sublime使用</span>
+            <span class="post-date" title="2018-10-12 15:07:00">2018/10/12</span>
+        </a>
+        
+        <a  class="ToolSet "
+           href="/ToolSet/8%E3%80%81Linux%E5%91%BD%E4%BB%A4/"
+           data-tag="日志"
+           data-author="" >
+            <span class="post-title" title="8、Linux命令">8、Linux命令</span>
+            <span class="post-date" title="2018-09-18 15:07:00">2018/09/18</span>
+        </a>
+        
+        <a  class="ToolSet "
+           href="/ToolSet/9%E3%80%81maven/"
+           data-tag="maven"
+           data-author="" >
+            <span class="post-title" title="9、maven">9、maven</span>
+            <span class="post-date" title="2018-09-28 15:07:00">2018/09/28</span>
+        </a>
+        
+        <a  class="微服务 "
+           href="/SpringCloudGateway/5%E3%80%81SpringCloudGateway%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0/"
+           data-tag="Gateway"
+           data-author="" >
+            <span class="post-title" title="5、SpringClouldGateway服务注册与发现">5、SpringClouldGateway服务注册与发现</span>
+            <span class="post-date" title="2020-06-03 15:00:00">2020/06/03</span>
+        </a>
+        
+        <a  class="SpringCloudGateway "
+           href="/SpringCloudGateway/3%E3%80%81SpringCloudGateway%E8%BF%87%E6%BB%A4%E5%99%A8/"
+           data-tag="Gateway"
+           data-author="" >
+            <span class="post-title" title="3、SpringCloudGateway过滤器">3、SpringCloudGateway过滤器</span>
+            <span class="post-date" title="2020-06-03 15:00:00">2020/06/03</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="post-ToolSet/10、腾讯云服务器" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">10、腾讯服务云部署</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+                <a  data-rel="ToolSet">ToolSet</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a class="color4">云服务</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2020-06-06 15:07:30'>2018-09-20 15:07</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#准备工作"><span class="toc-text">准备工作</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>1.申请腾讯云服务器<br>可以用QQ、微信申请一个试用15天的，登陆进入如图<br><img src="../../images/Other-tengxunyun-1.png"><br>2.重置密码<br>点击重置密码进行重置密码操作，然后重启服务器</p>
+<p>ubuntu系统安装jdk<br>sudo apt-get update<br>sudo apt-get install openjdk-8-jdk</p>
+<p>tomcat<br>sudo apt-get install tomcat8</p>
+<p>sudo /etc/init.d/tomcat8 restart  启动</p>
+<p>cd /var/lib/tomcat8/webapps 应用目录</p>
+<p>sudo apt install lrzsz 安装上传下载插件</p>
+<p>sudo sz xx.war  这里一定要加sudo，否则无权上传，（这玩意儿搞了好阵子才弄明白）</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 250556881@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>10、腾讯服务云部署</p>
+    
+    <p><span class="copy-title">本文作者:</span><a  title="殷海军">殷海军</a></p>
+    <p><span class="copy-title">发布时间:</span>2018-09-20, 15:07:00</p>
+    <p><span class="copy-title">最后更新:</span>2020-06-06, 15:07:30</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/ToolSet/10%E3%80%81%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="10、腾讯服务云部署">http://yoursite.com/ToolSet/10%E3%80%81%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">©2016-2019 Yelog</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+<div class="acParent"></div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.0.1" ></script>
+
+<script src="/js/script.js?v=1.0.1" ></script>
+<script>
+    var img_resize = 'default';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['#集合','#异常','#反射','#多线程','#克隆','#JUC','#TCP','#JVM','#Dubbo','#Springboot','#设计模式','#Layui','#Mybatis','#事务','#Servlet','#Config','#Spring','#定时任务','#Thymeleaf','#Web','#Springmvc','#Hystrix','#Gateway','#云服务','#rabbitMQ','#Mysql','#Redis','#git','#日志','#maven',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().split('\n').length - 1, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: ;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+        .nav .hide-list.fullscreen {
+            left: 492px
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
+        border: #e2dede solid 1px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://i.loli.net/2019/07/22/5d3521411f3f169375.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+    .post .pjax article :not(pre) > code {
+        color: #24292e;
+        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+        background-color: rgba(27,31,35,.05);
+        border-radius: 3px;
+        font-size: 85%;
+        margin: 0;
+        padding: .2em .4em;
+    }
+    
+</style>
+
+
+
+
+
+
+
+</html>
