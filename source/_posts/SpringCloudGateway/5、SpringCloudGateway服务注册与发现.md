@@ -1,7 +1,7 @@
 ---
 title: 5、SpringClouldGateway服务注册与发现
 date: 2020-06-03 15:00:00
-categories: 微服务
+categories: SpringCloudGateway
 tags: [Gateway]
 ---
 
